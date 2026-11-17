@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>products</title>
+</head>
+<body>
+
+<ol>
+    {% for u, (p , d) in products.items() %}
+        <li>product: {{ u }}, and price is <span {% if d <= 10%}style="color:green;"{%endif%}>{{p*(1-d/100)}}</span></li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>
